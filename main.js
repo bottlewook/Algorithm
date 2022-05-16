@@ -1,8 +1,13 @@
-function solution(s, t){
-  let answer = s.split(t).length
-  
-  return answer - 1;
+function solution(s) {
+  let answer = 0;
+  for(let x of s) {
+    if (!isNaN(x)) {
+      answer = answer * 10 + Number(x);
+    }
+  }
+
+  return answer;
 }
 
-let str = "COMPUTERPROGRAMMING";
-console.log(solution(str, 'R'));
+let str = "g0en2T0s8eSoft";
+console.log(solution(str));
